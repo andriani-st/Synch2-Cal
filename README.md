@@ -4,8 +4,11 @@ A Synthetic Framework for Benchmarking Multi-View Calibration and Point Cloud Re
 
 # Paper Datasets on Zenodo (4 Parts)
 Part 1: *DOI TBA*
+
 Part 2: *DOI TBA*
+
 Part 3: *DOI TBA*
+
 Part 4: *DOI TBA*
 
 # License and Use
