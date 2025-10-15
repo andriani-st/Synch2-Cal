@@ -1,0 +1,70 @@
+camera_config:
+    num_cameras: 8
+    center_cam_idx: 0
+    configuration_shape: 'circle' #'circle', 'rectangle' and 'custom' supported
+    d1: 1.5                       # for circle configuration d1 serves as the radius
+    d2: 2                         # for 'rectangle' configuration only
+    targets: [ [0,0.6,0],
+               [0,0.6,0],
+               [0,0.6,0],
+               [0,0.6,0],
+               [0,0.6,0],
+               [0,0.6,0],
+               [0,0.6,0],
+               [0,0.6,0]
+             ]
+    #sigma_targets: 0.01         # if this field is present randomization will be applied on targets
+
+    heights:  [ 1.2,            # all heights must be equal (for now) 
+                1.2,
+                1.2,
+                1.2,
+                1.2,
+                1.2,
+                1.2,
+                1.2
+              ]
+    #sigma_heights: 0.01         # if this field is present randomization will be applied on heights
+    
+    origins: [[2,1.2,-5],           # for 'custom' configuration only
+              [-2,1.2,1.5],
+             ]
+    #sigma_origins: 0.01         # if this field is present randomization will be applied on x,z dimensions of origins
+
+
+
+object_config:
+    #checker_obj_filepath: "resources/board_checker.obj"
+    #checker_texture_filepath: "resources/board_checker.png"
+    #charuco_obj_filepath: "resources/board_charuco.obj"
+    #charuco_texture_filepath: "resources/board_charuco.png"
+    boxes_folder_path: "D:/andrianist/Calibration/NeurIPS/office/res/boxes/boxes1"
+    
+    pos_cross_d1: 0.7
+    pos_cross_d2: 0.9           # for 'rectangle' configuration only
+
+
+scene_config:
+    envmap_filepath: "resources/outdoors.hdr"
+    envmap_light_scale: 10
+    envmap_rotation_axis: [0,1,0]
+    envmap_rotation_degrees: -90
+    room_folder_path: "D:/andrianist/Calibration/NeurIPS/office/test_room"
+            
+post_processing_config:
+    add_distortion: false
+    #distortion_coefficients: [-0.3, 0.1, 0.01, 0.01, 0.0]           # [k1,k2,p1,p2,k3] If present, distortion will be applied to the RGB images using these coefficients 
+    #distortion_coefficients: [0.3, -0.1, 0.01, 0.01, 0.0]  
+    #distortion_coefficients: [-0.05, 0.01, 0.0005, 0.0003, 0.0]  
+    
+    downsample: true
+    voxel_size_downsampling: 0.02        # Larger voxel_size means stronger downsampling (fewer points). If omitted, the PLY is saved as-is without downsampling.
+    
+    add_noise: false
+    #noise_std: 0.05                      # Noise std for gaussian noise to be added in the RGB images. If omitted, noise will not be added in the images.
+
+samples_per_pixel: 132              # high values result in better quality [528, 1024, 2070]
+save_ply: false
+
+sigma_gicp_rot: 5                   # In degrees
+sigma_gicp_trans: 0.2                    # In meters
