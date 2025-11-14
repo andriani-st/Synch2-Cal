@@ -7,7 +7,7 @@ Part 1: *DOI TBA*
 
 Part 2: *DOI TBA*
 
-Part 3: *DOI TBA*
+Part 3: https://zenodo.org/records/17598149
 
 Part 4: *DOI TBA*
 
